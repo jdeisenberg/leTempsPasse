@@ -39,12 +39,12 @@ function draw() {
   background(255);
   planet.display();
   human.display();
-  noLoop(); 
+//  noLoop(); 
   // if (auto) planet.generate();
   
 }
 
-// function keyPressed() {
+function keyTyped() {
 //   if (key == 'b') {
 //     planet.addObject(new Building(planet, -planet.a-planet.bornA));
 //     auto = false;
@@ -53,10 +53,13 @@ function draw() {
 //     planet.addObject(new Cloud(planet, -planet.a-planet.bornA));
 //     auto = false;
 //   }
-//   if (key == 't') {
-//     planet.addObject(new Tree2(planet, -planet.a-planet.bornA));
-//     auto = false;
-//   }
+   if (key == 't') {
+     console.log('Creating a tree.');
+     tobj = Object.create(Tree2);
+     tobj.tree2(planet, -planet.a - planet.bornA)
+     planet.addObject(tobj);
+     auto = false;
+   }
 //   if (key == 'w') {
 //     planet.addObject(new Eolienne(planet, -planet.a-planet.bornA));
 //     auto = false;
@@ -64,7 +67,7 @@ function draw() {
 //   if (key == ' ') {
 //     auto = true;
 //   }
-// }
+ }
 
 /**
 <h3>leTempsPasse</h3>

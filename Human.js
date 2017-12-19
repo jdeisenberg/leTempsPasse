@@ -17,7 +17,6 @@ var human =  {
   },
 
   drawMan: function drawMan(x, y, s, ang) {
-    console.log(x, y, s, ang);
     noStroke();
     fill(0);
     var m = s / 8; // mesure

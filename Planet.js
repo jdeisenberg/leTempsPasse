@@ -26,7 +26,7 @@ var planet = {
       d = this.displayables[i];
 
       // Checks if it's alive and passing the dying point
-      if( (d.posA < -this.a - ( this.dieA + d.age*speed ) ) && !(d.isDying) ){
+      if( (d.posA < -this.a - ( this.dieA + d.age * this.speed ) ) && !(d.isDying) ){
         d.isDying = true;
       }
 
@@ -60,7 +60,7 @@ var planet = {
 
     // draw elements 
     for (var i=0; i < this.displayables.length; i++) {
-      this.displayable[i].display();
+      this.displayables[i].display();
     }
 
     // draw ground
