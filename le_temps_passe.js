@@ -1,10 +1,17 @@
 /*
+
+Title: Le Temps Passe
+Date: 20 Dec 2017
+by: J David Eisenberg
+
+Based on work by Julien Deswaef, originally as follows:
+
 title: leTempsPasse
 date: 2009-09-19
 by: Juego & antiplastik
  
 what:
-  a fork of "choose your planet" by antiplastik, 
+  a fork of "choose your planet" by antiplastik 
   licensed under Creative Commons Attribution-Share Alike 3.0 license.
   Work: http://openprocessing.org/visuals/?visualID=3672
   License: http://creativecommons.org/licenses/by-sa/3.0/

@@ -72,7 +72,7 @@ var planet = {
     var n = frameCount * 0.05;
      if (frameCount % (40 * noise(n)) < 0.6) {
        // add an element
-      var objType = int(noise(n * 0.5) * 4);
+      var objType = int(noise(n * 0.5) * 5);
       switch (objType) {
         case 0:
           bobj = Object.create(Building);
@@ -93,7 +93,10 @@ var planet = {
           eobj = Object.create(Eolienne);
           eobj.eolienne(planet, -planet.a - planet.bornA);
           planet.addObject(eobj);
-          break;    
+          break;
+        case 4:
+          /* endpoint paranoia - does noise() give a number in [0,1] or [0, 1)? */
+          break;
       }
      }
   }
