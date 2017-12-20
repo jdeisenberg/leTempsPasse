@@ -71,21 +71,25 @@ var planet = {
   generate: function generate() {
     var n = frameCount * 0.05;
      if (frameCount % (40 * noise(n)) < 1 ) {
-//       // add an element
-//       switch (int(noise(n * 0.5) * 4) ) {
-//       case 0:
-//         planet.addObject(new Building(planet, -planet.a-bornA));
-//         break;
-//       case 1:
-//         planet.addObject(new Cloud(planet, -planet.a-bornA));
-//         break;
-//       case 2:
-//         planet.addObject(new Tree2(planet, -planet.a-bornA));
-//         break;
-//       case 3:
-//         planet.addObject(new Eolienne(planet, -planet.a-bornA ));
-//         break;    
-//       }
+       // add an element
+      switch (int(noise(n * 0.5) * 4) ) {
+      case 0:
+        bobj = Object.create(Building);
+        bobj.building(planet, -planet.a - planet.bornA);
+        planet.addObject(bobj);
+        break;
+      case 1:
+        // planet.addObject(new Cloud(planet, -planet.a-bornA));
+        break;
+      case 2:
+        tobj = Object.create(Tree2);
+        tobj.tree2(planet, -planet.a - planet.bornA);
+        planet.addObject(tobj);
+        break;
+      case 3:
+//        planet.addObject(new Eolienne(planet, -planet.a-bornA ));
+        break;    
+      }
      }
   }
 

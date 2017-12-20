@@ -40,23 +40,24 @@ function draw() {
   planet.display();
   human.display();
 //  noLoop(); 
-  // if (auto) planet.generate();
+  if (auto) planet.generate();
   
 }
 
 function keyTyped() {
-//   if (key == 'b') {
-//     planet.addObject(new Building(planet, -planet.a-planet.bornA));
-//     auto = false;
-//   }
+   if (key == 'b') {
+     bobj = Object.create(Building);
+     bobj.building(planet, -planet.a - planet.bornA);
+     planet.addObject(bobj);
+     auto = false;
+   }     
 //   if (key == 'c') {
 //     planet.addObject(new Cloud(planet, -planet.a-planet.bornA));
 //     auto = false;
 //   }
    if (key == 't') {
-     console.log('Creating a tree.');
      tobj = Object.create(Tree2);
-     tobj.tree2(planet, -planet.a - planet.bornA)
+     tobj.tree2(planet, -planet.a - planet.bornA);
      planet.addObject(tobj);
      auto = false;
    }
