@@ -51,23 +51,27 @@ function keyTyped() {
      planet.addObject(bobj);
      auto = false;
    }     
-//   if (key == 'c') {
-//     planet.addObject(new Cloud(planet, -planet.a-planet.bornA));
-//     auto = false;
-//   }
+   if (key == 'c') {
+     cobj = Object.create(Cloud);
+     cobj.cloud(planet, -planet.a - planet.bornA);
+     planet.addObject(cobj);
+     auto = false;
+   }
    if (key == 't') {
      tobj = Object.create(Tree2);
      tobj.tree2(planet, -planet.a - planet.bornA);
      planet.addObject(tobj);
      auto = false;
    }
-//   if (key == 'w') {
-//     planet.addObject(new Eolienne(planet, -planet.a-planet.bornA));
-//     auto = false;
-//   }
-//   if (key == ' ') {
-//     auto = true;
-//   }
+   if (key == 'w') {
+     eobj = Object.create(Eolienne);
+     eobj.eolienne(planet, -planet.a - planet.bornA);
+     planet.addObject(eobj);
+     auto = false;
+   }
+   if (key == ' ') {
+     auto = true;
+   }
  }
 
 /**
